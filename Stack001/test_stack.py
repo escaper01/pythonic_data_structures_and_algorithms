@@ -1,6 +1,6 @@
 import pytest
 from stack import MyStack
-from challenges import is_balanced
+from challenges import is_balanced, reverse_string, convert_int_to_bin
 
 
 class TestClassMyStack:
@@ -29,3 +29,12 @@ class TestClassMyStack:
 @pytest.mark.parametrize('parentheses, expected_output',[("[][]]]",False),("(({[]}))",True),('[][{}[',False)])
 def test_valid_parenthesese(parentheses, expected_output):
     assert is_balanced(parentheses) == expected_output
+
+
+@pytest.mark.parametrize('mystring, expected_output',[("escaper",'repacse'),("moon",'noom'),('race','ecar')])
+def test_reverse_string(mystring, expected_output):
+    assert reverse_string(mystring) == expected_output
+
+@pytest.mark.parametrize('myint, expected_output',[(8,'1000'),(1998,'11111001110'),(0,'0')])
+def test_convert_int_binary(myint, expected_output):
+    assert convert_int_to_bin(myint) == expected_output
