@@ -1,4 +1,3 @@
-import unittest
 from stack import MyStack
 
 
@@ -96,7 +95,3 @@ def convert_int_to_bin(dec_num: int) -> str:
 
 	## since get_elements return the stack elements in reverse
 	return ls[::-1]
-
-
-
-print(convert_int_to_bin(0))
