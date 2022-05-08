@@ -26,15 +26,15 @@ class TestClassMyStack:
         self.ownStack.get_elements() == ['a','b']
 
 
-@pytest.mark.parametrize('parentheses, expected_output',[("[][]]]",False),("(({[]}))",True),('[][{}[',False)])
-def test_valid_parenthesese(parentheses, expected_output):
-    assert is_balanced(parentheses) == expected_output
+@pytest.mark.parametrize('parentheses, exp_out',[("[][]]]",False),("(({[]}))",True),('[][{}[',False)])
+def test_valid_parenthesese(parentheses, exp_out):
+    assert is_balanced(parentheses) == exp_out
 
 
-@pytest.mark.parametrize('mystring, expected_output',[("escaper",'repacse'),("moon",'noom'),('race','ecar')])
-def test_reverse_string(mystring, expected_output):
-    assert reverse_string(mystring) == expected_output
+@pytest.mark.parametrize('mystring, exp_out',[("escaper",'repacse'),("moon",'noom'),('race','ecar')])
+def test_reverse_string(mystring, exp_out):
+    assert reverse_string(mystring) == exp_out
 
-@pytest.mark.parametrize('myint, expected_output',[(8,'1000'),(1998,'11111001110'),(0,'0')])
-def test_convert_int_binary(myint, expected_output):
-    assert convert_int_to_bin(myint) == expected_output
+@pytest.mark.parametrize('myint, exp_out',[(8,'1000'),(1998,'11111001110'),(0,'0')])
+def test_convert_int_binary(myint, exp_out):
+    assert convert_int_to_bin(myint) == exp_out
