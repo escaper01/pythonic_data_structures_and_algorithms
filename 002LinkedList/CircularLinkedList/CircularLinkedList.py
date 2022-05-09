@@ -109,7 +109,7 @@ class CircularLinkedList:
         new_cl = CircularLinkedList()
         cursor = self.head
         mid = self.__len__() // 2
-        count = 0
+        count = 1
 
         while cursor.next:
             if count == mid:

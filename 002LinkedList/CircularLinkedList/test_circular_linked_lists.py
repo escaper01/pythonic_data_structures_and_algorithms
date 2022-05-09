@@ -31,4 +31,18 @@ class TestCircularLinkedList:
         assert self.ownCircularLinkedList.get_last_node().data == 3
 
     def test_remove(self):
-        pass
+        self.ownCircularLinkedList.remove(key=-1)
+        assert self.ownCircularLinkedList.print_list() == [0,1,2,3]
+
+    def test_split_list(self):
+        splited_ll = self.ownCircularLinkedList.split_list()
+        splited_ll = [ll.print_list() for ll in splited_ll]
+
+        assert splited_ll == [[0,1],[2,3]]
+        
+    def test_josephus_circle(self):
+        self.ownCircularLinkedList.append(2)
+        self.ownCircularLinkedList.append(3)
+        self.ownCircularLinkedList.josephus_circle(step=2)
+
+        assert self.ownCircularLinkedList.print_list() == [0]
