@@ -6,9 +6,6 @@ from CircularLinkedList import CircularLinkedList
 class TestCircularLinkedList:
     ownCircularLinkedList = CircularLinkedList()
 
-    # for i in range(1,5):
-    #     ownCircularLinkedList.append(data)
-
     @pytest.mark.parametrize('obj, exp_out',[(1,[1]),(2,[1,2]),(3,[1,2,3])])
     def test_append(self, obj, exp_out):
         self.ownCircularLinkedList.append(obj)

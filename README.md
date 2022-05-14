@@ -18,3 +18,13 @@ Made this repository to practice my understanding of DSA. In addition to that, I
 
 - features: append, length, print list, remove, is circular, split
 - Josephus problem
+
+### 4 - Doubly Linked List
+
+- features: append, print_list, prepend, add_before_node, add_after_node, delete, remove_duplicates
+- Pair with sum
+
+### 5 - Array
+
+- plus_one, two_sum_brute_force, two_sum_hash_table,two_sum
+- optimal task assignment, intersection list, buy_and_sell_stocks
